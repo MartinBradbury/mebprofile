@@ -1,7 +1,7 @@
 {
   "name": "mebprofile",
   "private": true,
-  "homepage": "mebprofile.github.io",
+  "homepage": "https://mebprofile.github.io/mebprofile",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
