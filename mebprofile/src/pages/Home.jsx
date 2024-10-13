@@ -1,14 +1,11 @@
 import React, { Component } from 'react'
+import styles from '../styles/Home.module.css'
 
 export class Home extends Component {
   render() {
     return (
-      <div>
-        <h1>Martin Bradbury</h1>
-        <h6>Page Under Construction</h6>
-
-
-
+      <div className={styles}>
+        <h1>Home</h1>
       </div>
     )
   }
