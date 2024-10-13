@@ -1,31 +1,33 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import Nav from "react-bootstrap/Nav";
+import styles from "../styles/NavBar.module.css";
 
 export class NavBar extends Component {
   render() {
     return (
-      <Navbar expand="lg" className="bg-body-tertiary" fixed="top">
-        <Container>
-          <Navbar.Brand href="/">Martin Bradbury</Navbar.Brand>
-          <Nav variant="pills" defaultActiveKey="/">
-            <Nav.Item>
-              <Nav.Link as={NavLink} to="/" exact>
-                Home
-              </Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link as={NavLink} to="/about" exact>
-                About
-              </Nav.Link>
-            </Nav.Item>
+      <>
+        <Navbar className={styles.bg} expand="lg" fixed="top">
+          <Navbar.Brand className={styles.brand} as={NavLink} to="/">
+            Martin Bradbury
+          </Navbar.Brand>
+          <Nav className={styles.buttonPosition}>
+            <NavLink className={styles.button} as={NavLink} to="/" exact>
+              Home
+            </NavLink>
+            <NavLink className={styles.button} as={NavLink} to="/about">
+              About
+            </NavLink>
           </Nav>
-        </Container>
-      </Navbar>
+        </Navbar>
+      </>
     );
   }
 }
 
 export default NavBar;
+
+
+
