@@ -10,9 +10,6 @@ export class NavBar extends Component {
     return (
       <>
         <Navbar className={styles.bg} expand="lg" fixed="top">
-          <Navbar.Brand className={styles.brand} as={NavLink} to="/">
-            Martin Bradbury
-          </Navbar.Brand>
           <Nav className={styles.buttonPosition}>
             <NavLink
               to="/"

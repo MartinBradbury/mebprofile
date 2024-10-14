@@ -1,3 +1,23 @@
 .home-page h1 {
     margin-top: 55px;
 }
+
+.card {
+    margin-top: 10%;
+    padding: 10%;
+    
+}
+
+.cardPos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+
+}
+
+.bg {
+    background-color:#101010;
+    height: 100%;
+}
