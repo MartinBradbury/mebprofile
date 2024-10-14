@@ -29,9 +29,9 @@
 }
 
 .activeButton {
-    background-color: red; /* Active button background */
+    background-color: rgb(11, 11, 11); /* Active button background */
     color: white; /* Keep text color white */
-    border-bottom: 1px solid white; /* Active border */
+    border: 3px solid white; /* Active border */
 }
 
 .bg {

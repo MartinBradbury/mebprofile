@@ -35,6 +35,15 @@ export class NavBar extends Component {
             >
               About
             </NavLink>
+            <NavLink
+              to="/contact"
+              className={({isActive}) => 
+              isActive
+              ? `${styles.activeButton} ${styles.button}` : styles.button}
+              >
+              Contact
+
+            </NavLink>
           </Nav>
         </Navbar>
       </>
