@@ -60,12 +60,12 @@ const Home = () => {
         </Card>
 
         {/* Offcanvas Component */}
-        <Offcanvas show={show} onHide={handleClose}>
+        <Offcanvas className={styles.canvas} show={show} onHide={handleClose}>
           <Offcanvas.Header closeButton>
-            <Offcanvas.Title>Tri Hub</Offcanvas.Title>
+            <Offcanvas.Title><p>Tri Hub</p></Offcanvas.Title>
           </Offcanvas.Header>
-          <Offcanvas.Body>
-            TriHub is a comprehensive platform designed for the triathlon
+          <Offcanvas.Body >
+            <p>TriHub is a comprehensive platform designed for the triathlon
             community, created by Martin Bradbury. It aims to unite triathletes
             of all skill levels, offering features such as performance tracking,
             customizable training plans, and a vibrant social space for sharing
@@ -78,6 +78,7 @@ const Home = () => {
             participants, and newcomers alike, ensuring accessibility and
             support for all. With a focus on continuous improvement, future
             enhancements are planned to further enrich the user experience.
+            </p>
           </Offcanvas.Body>
         </Offcanvas>
 
