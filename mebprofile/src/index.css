@@ -1,9 +1,22 @@
-:root h1{
+:root h1 {
   background-color: #101010;
   color: #f2f2f2;
-  min-height: 100vh; /* To cover the entire viewport */
   padding: 20px;
   font-family: "Comic Neue", cursive;
   font-weight: 400;
   font-style: normal;
+  margin-top: 200px;
+  margin-bottom: 80px;
+  font-size: 60px;
+  font-weight: bold;
+  text-align: center;
+}
+
+p {
+  font-family: "Comic Neue", cursive;
+  font-size: 20px;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 50px;
+  color: white;
 }

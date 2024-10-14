@@ -10,15 +10,13 @@ export class NavBar extends Component {
     return (
       <>
         <Navbar className={styles.bg} expand="lg" fixed="top">
-          
+        
             <Nav className={styles.buttonPosition}>
             <div className={styles.linkedIn}>
-                <NavLink>
-                  <button className={styles.linkedInBtn}>
-                  Martin
-                  </button>
-                </NavLink>
+            <Navbar.Brand className={styles.linkedInBtn} href="#home">Martin</Navbar.Brand>
               </div>
+              <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
               <div className={styles.navLinks}>
                 <NavLink
                   to="/"
@@ -52,10 +50,11 @@ export class NavBar extends Component {
                   Contact
                 </NavLink>
               </div>
+              </Navbar.Collapse>
               <div className={styles.linkedIn}>
                 <NavLink>
                   <button className={styles.linkedInBtn}>
-                  LinkedIn
+                  LinkedIn <i class="fa-solid fa-up-right-from-square"></i>
                   </button>
                 </NavLink>
               </div>

@@ -25,6 +25,13 @@ const Home = () => {
   return (
     <div className={styles.bg}>
       <div className={styles.cardPos}>
+        <h1>
+          Martin Bradbury
+          <br />
+          <br />
+          Junior Full Stack Software Developer
+        </h1>
+        <p>Please find below a list of the projects I have completed.</p>
         <Card
           className={styles.card}
           onMouseEnter={handleMouseEnter}
@@ -46,8 +53,8 @@ const Home = () => {
           <Card.Body className={styles.cardBody}>
             <Card.Title>Tri Hub</Card.Title>
             <Card.Text>
-              A Full Stack project using React.js front end and Django REST
-              back end.
+              A Full Stack project using React.js front end and Django REST back
+              end.
             </Card.Text>
           </Card.Body>
         </Card>
@@ -55,15 +62,22 @@ const Home = () => {
         {/* Offcanvas Component */}
         <Offcanvas show={show} onHide={handleClose}>
           <Offcanvas.Header closeButton>
-            <Offcanvas.Title>Tri Hub Details</Offcanvas.Title>
+            <Offcanvas.Title>Tri Hub</Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>
-            Some text as placeholder. In real life, you can have the elements
-            you have chosen. Like, text, images, lists, etc. 
-            <p>
-              This project showcases my skills in React and Django, combining
-              them to create a seamless user experience.
-            </p>
+            TriHub is a comprehensive platform designed for the triathlon
+            community, created by Martin Bradbury. It aims to unite triathletes
+            of all skill levels, offering features such as performance tracking,
+            customizable training plans, and a vibrant social space for sharing
+            experiences. The project emphasizes user engagement, providing tools
+            for goal setting, community interaction, and access to industry
+            updates. Built using technologies like React, Axios, and React
+            Bootstrap on the frontend, and <strong>Python</strong> with Django REST on the
+            backend, TriHub features a responsive design with a straightforward
+            color scheme. It caters to competitive athletes, casual
+            participants, and newcomers alike, ensuring accessibility and
+            support for all. With a focus on continuous improvement, future
+            enhancements are planned to further enrich the user experience.
           </Offcanvas.Body>
         </Offcanvas>
 
