@@ -1,23 +1,62 @@
-.home-page h1 {
-    margin-top: 55px;
+.card {
+  margin-top: 10%;
+  border: none;
+  width: 1000px;
+  height: 510px;
+  overflow: hidden; /* Ensure content stays within the card */
 }
 
-.card {
-    margin-top: 10%;
-    padding: 10%;
-    
+.cardBody {
+  z-index: 1; /* Raise the card body above the video */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Semi-transparent background for contrast */
+  color: white; /* Text color for readability */
+  margin-top: 360px;
 }
 
 .cardPos {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 
+.video {
+  position: absolute; /* Position the video absolutely */
+  top: 0;
+  left: 0;
+  width: 100%; /* Cover full width */
+  height: 100%; /* Cover full height */
+  object-fit: cover; /* Cover the entire card area */
+  z-index: 0; /* Set to a lower z-index so content is above */
+}
 
+.card:hover .video {
+  visibility: visible; /* Changed from display: block */
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.btn {
+  margin-left: 25%;
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: 1px solid #7d7d7d;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.btn:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid white;
 }
 
 .bg {
-    background-color:#101010;
-    height: 100%;
+  background-color: #101010;
 }
