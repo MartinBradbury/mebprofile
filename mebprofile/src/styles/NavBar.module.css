@@ -12,24 +12,26 @@
 }
 
 .button {
-    padding: 10px 20px;        /* Adjust padding to control the size of the button */
-    border-radius: 50px;       /* Large border-radius to create the pill shape */
-    border: 2px solid #7d7d7d; /* Optional: Border style, adjust color as needed */
-    background-color: none; /* Button background color */
-    color: white;              /* Text color */
-    font-size: 16px;           /* Font size for the text */
-    cursor: pointer;          /* Change cursor to pointer on hover */
-    text-decoration: none;     /* Remove underline */
-    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
-    
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: 2px solid #7d7d7d;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
 }
 
 .button:hover {
-    background-color: #7d7d7d; /* Optional: Change background color on hover */
+    background-color: #7d7d7d;
 }
 
-.button:active {
-    color: red;
+.activeButton {
+    background-color: red; /* Active button background */
+    color: white; /* Keep text color white */
+    border-bottom: 1px solid white; /* Active border */
 }
 
 .bg {

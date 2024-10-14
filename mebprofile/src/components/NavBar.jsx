@@ -14,10 +14,25 @@ export class NavBar extends Component {
             Martin Bradbury
           </Navbar.Brand>
           <Nav className={styles.buttonPosition}>
-            <NavLink className={styles.button} as={NavLink} to="/" exact>
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive
+                  ? `${styles.button} ${styles.activeButton}`
+                  : styles.button
+              }
+            >
               Home
             </NavLink>
-            <NavLink className={styles.button} as={NavLink} to="/about">
+
+            <NavLink
+              to="/about"
+              className={({ isActive }) =>
+                isActive
+                  ? `${styles.button} ${styles.activeButton}`
+                  : styles.button
+              }
+            >
               About
             </NavLink>
           </Nav>
@@ -28,6 +43,3 @@ export class NavBar extends Component {
 }
 
 export default NavBar;
-
-
-
