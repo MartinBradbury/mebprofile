@@ -89,3 +89,44 @@
 .bg {
   background-color: #101010;
 }
+
+
+/* Mobile Styles */
+@media only screen and (max-width: 768px) {
+  .bg {
+    padding: 10px;
+  }
+
+  .card {
+    margin-bottom: 20px;
+    width: 100%;
+    height: 30%;
+  }
+
+  .video {
+    width: 100%; /* Full width video on small screens */
+    height: 100%;
+  }
+
+  h1 {
+    font-size: 1.5rem; /* Smaller text for mobile */
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
+
+/* Desktop and larger screen styles */
+@media only screen and (min-width: 769px) {
+  .card {
+    margin-bottom: 30px;
+    width: 100%;
+    height: 30%;
+  }
+
+  .video {
+    width: 100%;
+    height: 100%;
+  }
+}

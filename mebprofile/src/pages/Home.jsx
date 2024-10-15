@@ -1,31 +1,54 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import styles from "../styles/Home.module.css";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import video from "../assets/trihub2.mp4";
 import video2 from "../assets/trihub.mp4";
 import Offcanvas from "react-bootstrap/Offcanvas";
+import { Container, Row, Col } from "react-bootstrap"
 
 const Home = () => {
   const videoRef1 = useRef(null); // Ref for the first video
   const videoRef2 = useRef(null); // Ref for the second video
 
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Detect screen width to toggle autoplay behavior
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 770);
+    };
+
+    handleResize(); // Initial check
+    window.addEventListener("resize", handleResize); // Listen for screen resize
+
+    return () => window.removeEventListener("resize", handleResize); // Cleanup listener on component unmount
+  }, []);
+
   const handleMouseEnterVideo1 = () => {
-    videoRef1.current.play(); // Play the first video on mouse enter
+    if (!isMobile) {
+      videoRef1.current.play(); // Play the first video on mouse enter (desktop only)
+    }
   };
 
   const handleMouseLeaveVideo1 = () => {
-    videoRef1.current.pause(); // Pause the first video on mouse leave
-    videoRef1.current.currentTime = 0; // Reset video to start
+    if (!isMobile) {
+      videoRef1.current.pause(); // Pause the first video on mouse leave (desktop only)
+      videoRef1.current.currentTime = 0; // Reset video to start
+    }
   };
 
   const handleMouseEnterVideo2 = () => {
-    videoRef2.current.play(); // Play the second video on mouse enter
+    if (!isMobile) {
+      videoRef2.current.play(); // Play the second video on mouse enter (desktop only)
+    }
   };
 
   const handleMouseLeaveVideo2 = () => {
-    videoRef2.current.pause(); // Pause the second video on mouse leave
-    videoRef2.current.currentTime = 0; // Reset video to start
+    if (!isMobile) {
+      videoRef2.current.pause(); // Pause the second video on mouse leave (desktop only)
+      videoRef2.current.currentTime = 0; // Reset video to start
+    }
   };
 
   const [show, setShow] = useState(false);
@@ -38,8 +61,9 @@ const Home = () => {
   const handleShow2 = () => setShow2(true);
 
   return (
-    <div className={styles.bg}>
-      <div className={styles.cardPos}>
+    <Container fluid className={styles.bg}>
+      <Row className="justify-content-center text-center">
+      <Col xs={12} sm={10} md={8} lg={6}>
         <h1>
           Martin Bradbury
           <br />
@@ -60,6 +84,7 @@ const Home = () => {
             loop
             playsInline
             webkit-playsinline="true"
+            autoPlay={isMobile} // Autoplay on mobile only
             alt="triathlon background video"
           >
             <source src={video} type="video/mp4" />
@@ -119,6 +144,7 @@ const Home = () => {
             loop
             playsInline
             webkit-playsinline="true"
+            autoPlay={isMobile} // Autoplay on mobile only
             alt="triathlon background video"
           >
             <source src={video2} type="video/mp4" />
@@ -132,6 +158,7 @@ const Home = () => {
             </Card.Text>
           </Card.Body>
         </Card>
+        </Col>
 
         {/* Offcanvas Component */}
         <Offcanvas className={styles.canvas} show={show2} onHide={handleClose2}>
@@ -146,58 +173,8 @@ const Home = () => {
             </p>
           </Offcanvas.Body>
         </Offcanvas>
-
-        {/* Add more cards as needed */}
-        <Card className={styles.card}>
-          <Card.Img variant="top" src="holder.js/100px180" />
-          <Card.Body>
-            <Card.Title>Card Title</Card.Title>
-            <Card.Text>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </Card.Text>
-            <Button variant="primary">Go somewhere</Button>
-          </Card.Body>
-        </Card>
-
-        {/* Additional Cards */}
-        <Card className={styles.card}>
-          <Card.Img variant="top" src="holder.js/100px180" />
-          <Card.Body>
-            <Card.Title>Card Title</Card.Title>
-            <Card.Text>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </Card.Text>
-            <Button variant="primary">Go somewhere</Button>
-          </Card.Body>
-        </Card>
-
-        <Card className={styles.card}>
-          <Card.Img variant="top" />
-          <Card.Body>
-            <Card.Title>Card Title</Card.Title>
-            <Card.Text>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </Card.Text>
-            <Button variant="primary">Go somewhere</Button>
-          </Card.Body>
-        </Card>
-
-        <Card className={styles.card}>
-          <Card.Img variant="top" src="holder.js/100px180" />
-          <Card.Body>
-            <Card.Title>Card Title</Card.Title>
-            <Card.Text>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </Card.Text>
-            <Button variant="primary">Go somewhere</Button>
-          </Card.Body>
-        </Card>
-      </div>
-    </div>
+        </Row>
+        </Container>
   );
 };
 
