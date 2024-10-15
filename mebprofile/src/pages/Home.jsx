@@ -76,8 +76,8 @@ const Home = () => {
 
         {/* Offcanvas Component */}
         <Offcanvas className={styles.canvas} show={show} onHide={handleClose}>
-          <Offcanvas.Header closeButton>
-            <Offcanvas.Title>
+          <Offcanvas.Header className={styles.whiteCloseButton} closeButton>
+            <Offcanvas.Title className={styles.canvasTitle}>
               <p>Tri Hub</p>
             </Offcanvas.Title>
           </Offcanvas.Header>
@@ -97,9 +97,11 @@ const Home = () => {
               improvement is a priority, with future updates planned to enhance
               user satisfaction and expand platform capabilities.
               <br />
-              Technologies Used: Frontend: React, Axios, React Bootstrap
+              <br />
+              <h1>Technologies Used:</h1> 
+              <strong>Frontend: React, Axios, React Bootstrap
               Backend: Python, Django REST Additional Features: Responsive
-              design</p>
+              design</strong></p>
           </Offcanvas.Body>
         </Offcanvas>
 
@@ -133,8 +135,8 @@ const Home = () => {
 
         {/* Offcanvas Component */}
         <Offcanvas className={styles.canvas} show={show2} onHide={handleClose2}>
-          <Offcanvas.Header closeButton>
-            <Offcanvas.Title>
+          <Offcanvas.Header className={styles.whiteCloseButton} closeButton>
+            <Offcanvas.Title className={styles.canvasTitle}>
               <p>Walking the Wainwrights</p>
             </Offcanvas.Title>
           </Offcanvas.Header>

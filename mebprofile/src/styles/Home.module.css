@@ -74,6 +74,18 @@
     color: white;
 }
 
+.whiteCloseButton {
+  filter: invert(1); /* Invert the color to make it white */
+  opacity: 1; /* Ensure full opacity */
+  color: white;
+  padding-top:0px;
+}
+
+.canvasTitle p{
+  filter: invert(1);
+  padding-top: 10px;
+}
+
 .bg {
   background-color: #101010;
 }
