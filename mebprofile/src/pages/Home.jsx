@@ -29,9 +29,13 @@ const Home = () => {
   };
 
   const [show, setShow] = useState(false);
+  const [show2, setShow2] = useState(false);
 
   const handleClose = () => setShow(false);
+  const handleClose2 = () => setShow2(false);
+
   const handleShow = () => setShow(true);
+  const handleShow2 = () => setShow2(true);
 
   return (
     <div className={styles.bg}>
@@ -73,23 +77,29 @@ const Home = () => {
         {/* Offcanvas Component */}
         <Offcanvas className={styles.canvas} show={show} onHide={handleClose}>
           <Offcanvas.Header closeButton>
-            <Offcanvas.Title><p>Tri Hub</p></Offcanvas.Title>
+            <Offcanvas.Title>
+              <p>Tri Hub</p>
+            </Offcanvas.Title>
           </Offcanvas.Header>
-          <Offcanvas.Body >
-            <p>TriHub is a comprehensive platform designed for the triathlon
-            community, created by Martin Bradbury. It aims to unite triathletes
-            of all skill levels, offering features such as performance tracking,
-            customizable training plans, and a vibrant social space for sharing
-            experiences. The project emphasizes user engagement, providing tools
-            for goal setting, community interaction, and access to industry
-            updates. Built using technologies like React, Axios, and React
-            Bootstrap on the frontend, and <strong>Python</strong> with Django REST on the
-            backend, TriHub features a responsive design with a straightforward
-            color scheme. It caters to competitive athletes, casual
-            participants, and newcomers alike, ensuring accessibility and
-            support for all. With a focus on continuous improvement, future
-            enhancements are planned to further enrich the user experience.
-            </p>
+          <Offcanvas.Body>
+            <p>TriHub is a comprehensive platform created by Martin Bradbury,
+              designed to serve the diverse needs of the triathlon community. It
+              aims to bring together triathletes of all skill levels by offering
+              a range of features, including performance tracking, customizable
+              training plans, and a vibrant social space for sharing
+              experiences. The platform emphasizes user engagement, providing
+              tools for setting goals, interacting with the community, and
+              staying updated with the latest industry news. TriHub's design
+              focuses on accessibility and usability for competitive athletes,
+              casual participants, and newcomers alike. The platform features a
+              responsive layout and a clean, straightforward color scheme,
+              ensuring a seamless experience across all devices. Continuous
+              improvement is a priority, with future updates planned to enhance
+              user satisfaction and expand platform capabilities.
+              <br />
+              Technologies Used: Frontend: React, Axios, React Bootstrap
+              Backend: Python, Django REST Additional Features: Responsive
+              design</p>
           </Offcanvas.Body>
         </Offcanvas>
 
@@ -98,7 +108,7 @@ const Home = () => {
           className={styles.card}
           onMouseEnter={handleMouseEnterVideo2}
           onMouseLeave={handleMouseLeaveVideo2}
-          onClick={handleShow} // Click to show Offcanvas
+          onClick={handleShow2} // Click to show Offcanvas
         >
           <video
             ref={videoRef2} // Attach the ref to the video element
@@ -122,24 +132,15 @@ const Home = () => {
         </Card>
 
         {/* Offcanvas Component */}
-        <Offcanvas className={styles.canvas} show={show} onHide={handleClose}>
+        <Offcanvas className={styles.canvas} show={show2} onHide={handleClose2}>
           <Offcanvas.Header closeButton>
-            <Offcanvas.Title><p>Tri Hub</p></Offcanvas.Title>
+            <Offcanvas.Title>
+              <p>Walking the Wainwrights</p>
+            </Offcanvas.Title>
           </Offcanvas.Header>
-          <Offcanvas.Body >
-            <p>TriHub is a comprehensive platform designed for the triathlon
-            community, created by Martin Bradbury. It aims to unite triathletes
-            of all skill levels, offering features such as performance tracking,
-            customizable training plans, and a vibrant social space for sharing
-            experiences. The project emphasizes user engagement, providing tools
-            for goal setting, community interaction, and access to industry
-            updates. Built using technologies like React, Axios, and React
-            Bootstrap on the frontend, and <strong>Python</strong> with Django REST on the
-            backend, TriHub features a responsive design with a straightforward
-            color scheme. It caters to competitive athletes, casual
-            participants, and newcomers alike, ensuring accessibility and
-            support for all. With a focus on continuous improvement, future
-            enhancements are planned to further enrich the user experience.
+          <Offcanvas.Body>
+            <p>
+              Test
             </p>
           </Offcanvas.Body>
         </Offcanvas>
